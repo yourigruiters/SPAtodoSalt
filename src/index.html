@@ -5,12 +5,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>&lt;/salt&gt; :: ToDo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./style/todo.css">
   <script defer src="./js/todo.js"></script>
 </head>
 
 <body>
-  <!-- Add your markup here -->
+  <section class="spacer">
+    <article class="spacer__todo">
+      <section class="todo">
+        <section class="todo__header">
+          <h1 class="todo__title">ToDo's</h1>
+        </section>
+        <section class="add">
+          <form class="add__form" id="form">
+            <section class="add__input">
+              <label for="todo">I don't want to.. but let's add:</label>
+              <input type="text" id="todo" name="todo" maxlength="30" placeholder="...">
+              <p><span id="todo__length">30</span> characters left</p>
+            </section>
+            <section class="add__input add__input--submit">
+              <input type="submit" value="Add more work!">
+            </section>
+          </form>
+        </section>
+        <section class="todo__body">
+          <section class="block">
+            <section class="block__header block__header--active">
+              <h4 class="block__title">Active (<span class="block__title--amount"></span>)</h4>
+            </section>
+            <section class="block__body block__body--active">
+              <!-- Incoming active content -->
+            </section>
+          </section>
+        </section>
+        <section class="todo__body">
+          <section class="block">
+            <section class="block__header">
+              <h4 class="block__title">Done (<span class="block__title--amount"></span>)</h4>
+            </section>
+            <section class="block__body">
+              <!-- Incoming done content -->
+            </section>
+          </section>
+        </section>
+        <section class="todo__body">
+          <section class="block">
+            <section class="block__header">
+              <h4 class="block__title">Removed (<span class="block__title--amount"></span>)</h4>
+            </section>
+            <section class="block__body">
+              <!-- Incoming removed content -->
+            </section>
+          </section>
+        </section>
+      </section>
+    </article>
+  </section>
 </body>
 
 </html>
